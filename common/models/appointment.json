@@ -1,0 +1,29 @@
+{
+  "name": "Appointment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "CustomerID": {
+      "type": "number",
+      "required": true
+    },
+    "Date": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "CustomerID",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
