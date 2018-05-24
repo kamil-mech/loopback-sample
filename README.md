@@ -19,6 +19,32 @@ Then go to app api ui and make some entities (I made exactly 2 each)
 - http://localhost:3000/explorer/#!/Customer/Customer_create
 - http://localhost:3000/explorer/#!/Appointment/Appointment_create
 
+e.g.
+```
+{
+  "Name": "string",
+  "Country": "string"
+}
+```
+```
+{
+  "Name": "string2",
+  "Country": "string2"
+}
+```
+```
+{
+  "CustomerID": 1,
+  "Date": "string"
+}
+```
+```
+{
+  "CustomerID": 2,
+  "Date": "string"
+}
+```
+
 You can CTRL+C the node process at will without losing data, but closing mysql will lose the data
 
 Note mysql may not shut down properly on exit, a quick careless way of cleaning up is to run `docker rm -f $(docker ps -aq)`
